@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 6</title>
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <link rel="stylesheet" href="def.css">
+    <link rel="stylesheet" href="montserrat.css">
+    <link rel="stylesheet" href="oswald.css">
+    <style>
+        body {
+            height: fit-content;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-image: url(6back.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-sizing: border-box;
+        }
+        body::after{
+            content: '';
+            position: absolute;
+            width: 100%; 
+            height: 100%;
+            background-color: #000000c1;
+        }
+        body > * {
+            z-index: 2;
+        }
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            width: 60%;
+            height:fit-content;
+            min-height:400px ;
+            min-width: 310px;
+            background-color: rgba(255, 255, 255, 0.858);
+            backdrop-filter: blur(1px);
+            display: grid;
+            grid-template-columns: 40% 60%;
+            color: white;
+        }
+        .box-img{
+            background-color: black;
+            background-image:url(keyhand.jpeg) ;
+            background-size: cover;
+            background-position: center;
+        }
+        .box-txt{
+            padding: 4em 2em;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        h2{
+            color: black;
+            font-family: rubik-semibold;
+            font-size: 12pt;
+            text-decoration: underline;
+        }
+        h1{
+            font-family: 'oswald-semibold';
+            color: black;
+        }
+        .btn {
+            width: 100%;
+            height: 50px;
+            padding: 1em;
+            background: #000000;
+            color: white;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+            font-family: 'Poppins-SemiBold';
+            font-size: .8em;
+            margin-top: 15px;
+        }
+        form {
+            width: 50%;
+            height: fit-content;
+            min-width: 310px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 2em;
+            z-index: 5;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 1em;
+            background: #877b3177;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins-SemiBold';
+            font-size: 1em;
+            margin: 20px;
+            margin-left: 5px;
+        }
+        .thanks {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .return {
+            width: 50%;
+            max-width: 300px;
+            height: 50px;
+            padding: 1em;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins-SemiBold';
+            font-size: 1em;
+        }
+        @media screen and (max-width: 890px) {  
+            h2{
+                font-size: 10pt;
+            }
+            h1{
+                font-size: 14pt;
+            }
+            .btn{
+                font-size: .6em;
+            }
+        }
+        @media screen and (max-width: 800px) {  
+            .box{
+                grid-template-columns: 1fr;
+                grid-template-rows: 35% 65%;
+                width: 80%;
+            }
+            .box-txt{
+                padding: 1em 2em;
+            }
+            .box-img{
+                background-image: url(keyhandl\ .jpeg);
+
+            }
+            h2{
+                font-size: 10pt;
+            }
+            h1{
+                font-size: 14pt;
+            }
+            .btn{
+                font-size: .6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="box-img">
+            </div>
+            <div class="box-txt">
+                <h2> FREE REAL ESTATE CONSULTATION</h2>
+                <h1>Looking to buy or sell? Get a free consultation with a real estate expert!</h1>
+                <button class="btn " onclick="cta()">FIND MY DREAM HOME NOW →</button>
+            </div>
+        </div>
+    </section>
+    <div class="cover none"></div>
+    <form class="form none" onsubmit="filled = true; thnk()">
+        <h2>Find Your Dream Home Today!</h2>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <input type="text" placeholder="Where Do You Want to Live?">
+        <button class="btn" type="submit">DISCOVER HOMES FOR YOU →</button>
+    </form>
+    <div class="thanks">
+        <h1>Thank you for Your Response</h1>
+        <button class="return" onclick="back()">Return</button>
+    </div>
+    <script>
+       let pn = "filled6";
+    </script>
+    <script src="def.js"></script>
+</body>
+</html>

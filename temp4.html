@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 4</title>
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <link rel="stylesheet" href="def.css">
+    <link rel="stylesheet" href="montserrat.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-image: url('way-white-house.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        body > *{
+            z-index: 2;
+        }
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0000007b;
+            backdrop-filter: blur(3px);
+        }
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            width: 40%;
+            height: 85%;
+            min-width: 310px;
+            background-color: rgba(0, 0, 0, 0.829);
+            backdrop-filter: blur(1px);
+            min-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            padding-top: 0;
+            color: white;
+           
+        }
+        .box h1,
+        .box h2,
+        .box p {
+            text-align: center;
+        }
+        .box h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+        }
+
+        .business-name{
+            width: 90%;
+            height: 80px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: transparent;
+            color: white;
+            font-family: poppins-semibold;
+            font-size: 1.5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.815);
+        }
+        .btn {
+            width: 50%;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+        .icon{
+            width: 250px;
+            aspect-ratio: 1/1;
+            background: transparent;
+        }
+        form {
+            width: 50%;
+            height: 55%;
+            min-width: 310px;
+            min-height: fit-content;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 2em;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: #877b3177;
+            border: none;
+            border-radius: 5px;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+        .thanks {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .return {
+            width: 50%;
+            max-width: 300px;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>      
+    <section>
+        <div class="box">
+            <div class="business-name">Business Name </div>
+            <h1>Looking for Your Dream Home?</h1>
+            <h2>GET A FREE CONSULTATION – NO OBLIGATIONS</h2>
+            <p>Let us help you find the perfect home for your needs. Explore our listings and see what’s waiting for you.</p>
+            <button class="btn none" onclick="cta()"> Get Started </button>
+        </div>
+        <div class="icon">
+            <img src="mhi.png" alt="house-icon" style="width: 100%; height: 100%;">
+        </div>
+    </section>
+    <div class="cover none"></div>
+    <form class="form none" onsubmit="filled = true; thnk()">
+        <h2></h2>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <input type="text" placeholder="Enter your Address">
+        <button class="btn" type="submit">Submit</button>
+    </form>
+    <div class="thanks">
+        <h1>Thank you for Your Response</h1> 
+        <button class="return" onclick="back()">Return</button>
+    </div>
+
+    <script>
+       let pn = "filled4"
+    </script>
+    <script src="def.js"></script>
+</body>
+</html>

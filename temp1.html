@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: rubik-regular;
+        }
+        html,body{
+            background:silver;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            height: 100vh;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        body::after{
+            content: '';
+            width: 100%;
+            height: 45vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+        }
+        body > * {
+            z-index: 2;
+        }
+        section{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+            height: 80vh;
+            position: relative;
+        }           
+        section > div{
+            height: fit-content;
+            width: 40%;
+            border:1px solid transparent;
+            color: black;
+            box-sizing: content-box;
+        }
+        .txt{
+            display: flex;
+            min-height: 200px;
+            max-width: fit-content;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 4em 0;
+            background-color: rgba(255, 255, 255, 0.349);
+            padding: 2em;
+            border-radius: 5px;
+            backdrop-filter: blur(10px);
+            box-shadow:
+                0 0 13px black,
+                0 0 20px silver;
+        }
+        .txt:hover::before{
+            opacity: 1;
+        }
+        .txt::before{
+            content: 'Business Info';
+            position: absolute;
+            white-space: nowrap;
+            top: -30px;
+            left: 30%;
+            color: black;
+            font-family: rubik-light;
+            background-color: white;
+            padding: .09em;
+            border-radius: 3px;
+            display: block;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+        h1{
+            font-family: rubik-semibold;
+            font-size: 30pt;
+        }
+        p{
+            font-family: poppins-light;
+            font-size: 10pt;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            padding: 135px 0 0 0;
+        }
+        .btn > button{
+            height: fit-content;
+            box-sizing: content-box;
+            padding: .8em 5em;
+            font-family: poppins-semibold;
+            background-color: transparent;
+            border: 3px solid black;
+            color: black;
+            transition: all .25s ease-in-out;
+            position: relative;
+            box-shadow:
+                0 0 10px black,
+                0 0 25px silver;
+        }
+        .btn > button:hover{
+            background-color: rgba(255, 255, 255, 0.333);
+            backdrop-filter: blur(5px);
+            scale: 1.1;
+            color: black; 
+            font-family: poppins-bold;
+        }
+        .btn > button:hover::before{
+            opacity: 1;
+        }
+        .btn > button::before{
+            content: 'CTA BUTTON';
+            position: absolute;
+            white-space: nowrap;
+            top: -30px;
+            left: 30%;
+            color: black;
+            font-family: rubik-light;
+            background-color: white;
+            padding: .09em;
+            border-radius: 3px;
+            display: block;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+        .cover{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            background-color: rgba(255, 255, 255, 0.505);
+            backdrop-filter: blur(10px);
+        }
+        form{
+            width: 500px;
+            min-width: 500px;
+            aspect-ratio: 4/3;
+            z-index: 5;
+            position: absolute;
+            background-color: white;
+            padding:1.5em ;
+        }
+        form > div{
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+        }
+        label{
+            font-family: poppins-semibold;
+        }
+        input{
+            width: 85%;
+            height: 29px;
+            border-radius: 8px;
+            border: 2px solid grey;
+            outline: 0;
+            padding: 5px;
+            transition: all .25s ease-in-out;
+        }
+        input:focus{
+            height: 35px;
+        }
+        .submit{
+            box-shadow: none;
+            border: 2px solid grey;
+            border-radius:5px ;
+            padding: .7em 1.5em;
+            transition: all .3s ease;
+        }
+        .submit:hover{
+            scale: 1.05;
+
+        }
+        .thanks{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 10;
+            background-color: white;
+        }
+          
+        @media screen and (max-width:750px){
+            section{
+                flex-direction: column;
+                justify-content: center;
+            }
+            .txt{
+                width: 80%;
+                margin-bottom: 50px;
+            }
+            .btn{
+                padding: 0;
+            }
+            .btn > button{
+                padding: .8em 3em;
+            }
+            form{
+                width: 90%;
+                min-width: 90%;
+            }   
+        }
+
+        
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="txt">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque laboriosam asperiores rerum, laborum cupiditate eveniet? Fugit iusto ullam consequatur consequuntur soluta nulla. Numquam exercitationem commodi blanditiis.</p>
+        </div>
+        <div class="btn">
+            <button onclick="cta()">Get Started</button>
+        </div>
+
+        <div class="cover none"></div>
+
+        <form class="form none" action="" onsubmit="filled = true; thnk()" >
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text">
+            </div>
+            <button type="submit" class="submit" >Lorem ipsum dolor sit.</button>
+        </form>
+    </section>
+
+
+    <div class="thanks none">
+        <h1>Thank you for filling the form</h1> 
+        <button onclick="back()">Return</button>
+    </div>
+    
+    <script>
+        pn = 'filled1';
+    </script>
+    <script src="def.js"></script>
+</body>
+</html>

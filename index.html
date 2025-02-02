@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Media Templates</title>
+    <link rel="stylesheet" href="montserrat.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <link rel="stylesheet" href="rubik.css">
+    <style>
+        :root{
+            --main: #091A2B;
+            --main-trans:#091a2b79;
+            --main2:#005163;
+            --essence:#3B4876;
+            --greyish:#A8AEAF;
+            --greyishblue:#9bd8e3;
+            --whiteish:#F1F3F4;
+        }
+        *{
+            color: white;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background: linear-gradient(315deg, #091A2B, #0C2433, #102C3C, #143445, #183C4E, #1C4556, #204D5F, #245568, #285D70, #2C6679, #306E82, #35768A, #397F93, #3D879B, #418FA4, #4597AD, #4AA0B5, #4EA8BE, #52B0C7, #091a2b79);
+            padding: 0;
+            margin: 0;
+            padding-bottom: 200px;
+        }
+        header{
+            background-color: var(--main);
+            color: white;
+            padding: 1em 0 ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .logo-con{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content:center;
+        }
+        .logo{
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+        header h1{
+            font-family: montserrat-extrabold;
+            font-size: 4em;
+            margin: 0;
+            margin-top: 20px;
+        }
+        section{
+            width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            margin-top: 50px;
+        }
+        .intro-txt{
+            width: 50%;
+            text-align: left;
+            color: white;
+            font-family: poppins-semibold;
+            font-size: 1.5em;
+            background-color: transparent;
+            height: fit-content;
+            margin-right:50px;
+        }
+        .intro-txt p{
+            font-size: 15pt;
+        }
+        .intro-button{
+            width: 300px;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: #877b31;
+            color: white;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+            font-family: poppins-semibold;
+            font-size: 1em;
+            margin-top: 15px;
+            align-self: flex-start;
+            margin-top: 10%;
+        }
+        hr{
+            margin-top: 100px;
+            width: 75%;
+            border: 3px solid white;
+            border-radius: 10px;
+            transition: all .2s ease-in-out;
+        }
+        hr:hover{
+            scale: 1.05;
+        }
+        .benefit-con{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: fit-content;
+            background-color: rgba(255, 255, 255, 0.164);
+            grid-auto-rows:auto;
+            backdrop-filter: blur(10px);
+            grid-gap: 2em;
+            padding: 2em;
+            transition: all .5s ease-in-out;
+        }
+        .benefit{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.272);
+            border-radius: 5px;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all .5s ease-in-out;    
+            position: relative;
+        }
+        .ben-icon{
+            width: 60%;
+            aspect-ratio: 1/1;
+            background-color: transparent;
+            transition: all .5s ease-in-out;
+        }
+        .benefit p{
+            font-family: poppins-semibold;
+            font-size:18pt;
+            color: white;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .benefit:hover p{
+            opacity: 0;
+        }
+        .benefit:hover > .ben-icon{
+            transform: scale(1.1);
+            margin-top: 15px;
+        }
+        .benefit::after{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+            background: rgba(255, 255, 255, 0.664);
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: poppins-bold;
+            padding: .5em;
+            font-size: 18pt;
+            box-sizing: border-box;
+            color: black;
+        }
+        .benefit:hover::after{
+            opacity: 1;
+        }   
+        .ben1::after{
+            content: 'Optimized for flawless user experience across all devices';
+        }
+        .ben2::after{
+            content: 'We tailor templates to match your brand’s style and goals.';
+        }
+        .ben3::after{
+            content: 'Proven to drive engagement and conversions';
+        }
+        .template-con{
+            width: 95%;
+            display: grid;
+            height: 600px;
+            overflow-y: scroll;
+            grid-template-columns: repeat(2, 1fr);
+            background-color:white;
+            grid-auto-rows:auto;
+            backdrop-filter: blur(10px);
+            grid-gap: 2em;
+            padding: 2em;
+            padding-top: 0;
+            transition: all .5s ease-in-out;
+            border-radius:5px ;
+            position: relative;
+        }
+        .template{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.272);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all .5s ease-in-out;    
+            position: relative;
+        }
+        .template::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(114, 114, 114, 0.758);
+            backdrop-filter: blur(2px);
+            opacity: 1;
+            transition: all .3s ease-in-out;
+            opacity: 0;
+        }
+        .template::after{
+            content: 'Preview ⧉';
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            padding: .8em 1.5em;
+            background-color: var(--main2);
+            border-radius: 1000px;
+            font-family: poppins-semibold;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+        .template:hover::after,
+        .template:hover::before{
+            opacity: 1;
+        }
+        .template-header{
+            grid-column: 1/3;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.055);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-con">
+            <div class="logo">
+                <img src="logomono 1.png" alt="" width="100%" height= "100%">
+            </div>
+        </div>
+        <h1>MB MEDIA TEMPLATES  </h1>
+    </header>
+
+    <section class="intro">
+        <div class="intro-txt">
+            <h1>MB Media Templates</h1>
+            <p>
+                This landing page template collection includes options for lead capture, promotions, social bio links, sales, consultations, and webinars. They help grow leads, promote offers, convert followers, monetize with sales funnels, offer consultations, and streamline webinar sign-ups, providing versatile tools to enhance engagement and drive business growth effectively.
+            </p>
+        </div>
+        <a href="#templates"><button class="intro-button">See Templates</button></a>
+    </section>
+
+    <hr>
+
+    <section>
+        <div class="benefit-con">
+            <div class="benefit ben1">
+                <div class="ben-icon"><img src="reponsive.png" width="100%" height="100%"></div>
+                <p>Responsive Designs</p>
+            </div>
+            <div class="benefit ben2">
+                <div class="ben-icon"><img src="customize.png" width="100%" height="100%"></div>
+                <p>Fully Customizable</p>
+            </div>
+            <div class="benefit ben3">
+                <div class="ben-icon"><img src="performance.png" width="100%" height="100%"></div>
+                <p>Proven Performance</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="templates" id="templates">
+
+        <div class="template-con">
+            <div class="template-header"></div>
+            <a><div class="template">
+                <img src="landtemp2.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a href="temp2.html"><div class="template">
+                <img src="landtemp2.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a href="temp3.html"><div class="template">
+                <img src="landtemp3.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a href="temp4.html"><div class="template">
+                <img src="landtemp4.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a href="temp5.html"><div class="template">
+                <img src="landtemp5.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a href="temp6.html"><div class="template">
+                <img src="landtemp6.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a><div class="template">
+                <img src="landtemp2.png" alt="" width="100%" height="100%">
+            </div></a>
+            <a><div class="template">
+                <img src="landtemp2.png" alt="" width="100%" height="100%">
+            </div></a>
+            
+        </div>
+    </section>
+</body>
+</html>

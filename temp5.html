@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 5</title>
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <link rel="stylesheet" href="def.css">
+    <link rel="stylesheet" href="montserrat.css">
+    <style>
+        body {
+            height: fit-content;
+            min-height: 100vh;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-image: url('5back.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-sizing: border-box;
+        }
+        body > * {
+            z-index: 2;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #00000030;
+            backdrop-filter: blur(3px);
+        }
+        body::after{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height:60%;
+            aspect-ratio:16/8 ;
+            background-image:url(coffee.jpg) ;
+            background-size: cover;
+        }
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            width: 60%;
+            height:fit-content;
+            min-height:400px ;
+            min-width: 310px;
+            background-color: rgba(211, 183, 131, 0.858);
+            backdrop-filter: blur(1px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2em;
+            padding-top: 0;
+            color: white;
+        }
+        h2{
+            font-family: montserrat-bold;
+            color: black;
+        }
+        h1{
+            font-family: montserrat-extrabold;
+            text-align: center;
+            font-size: 24pt;
+            color: black;
+            text-align: center;
+        }
+        .btn {
+            width: 55%;
+            height: 50px;
+            padding: 1em;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+            font-family: 'Poppins-Bold';
+            font-size: 1em;
+            margin-top: 15px;
+            border-radius: 3px;
+        }
+        form {
+            width: 50%;
+            height: fit-content;
+            min-width: 310px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 2em;
+            z-index: 5;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 1em;
+            background: #877b3177;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins-SemiBold';
+            font-size: 1em;
+        }
+        .thanks {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .return {
+            width: 50%;
+            max-width: 300px;
+            height: 50px;
+            padding: 1em;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins-SemiBold';
+            font-size: 1em;
+        }
+        hr{
+            width: 100px;
+            margin: 20px;
+            border: 3.5px solid white;
+            border-radius: 10px;
+
+        }
+        @media screen and (max-width: 780px) {
+            h2{
+                font-size:13pt ;
+            }
+            h1{
+                font-size: 20pt;
+            }
+            .btn{
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 580px) {
+            h2{
+                font-size:13pt ;
+            }
+            h1{
+                font-size: 17pt;
+            }
+            .btn{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <hr>
+            <h2>FREE CONSULTATION CALL</h2>
+            <h1>Ready to book your FREE consultation to grow your business?</h1>
+            <button class="btn " onclick="cta()">Book My Free Call →</button>
+        </div>
+    </section>
+    <div class="cover none"></div>
+    <form class="form none" onsubmit="filled = true; thnk()">
+        <h2>Book a Free call Today</h2>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <button class="btn" type="submit">Book Free Call →</button>
+    </form>
+    <div class="thanks">
+        <h1>Thank you for Your Response</h1>
+        <button class="return" onclick="back()">Return</button>
+    </div>
+    <script>
+       let pn = "filled5";
+    </script>
+    <script src="def.js"></script>
+</body>
+</html>

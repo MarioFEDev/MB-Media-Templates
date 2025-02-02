@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 3</title>
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="Poppins.css">
+    <link rel="stylesheet" href="montserrat.css">
+    <link rel="stylesheet" href="def.css">
+    <style>
+        body{
+            background-image: url('3back.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        section{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 80%;
+            height: 80%;
+            min-width: 310px;
+            min-height: fit-content;
+            background: rgba(255, 255, 255, 0.674);
+            backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: 30% 65%;
+            grid-template-rows: 20% 80%;
+            grid-gap: 2em;
+            padding: 1em 4em;
+            padding-top: 0;
+            place-items: center; 
+            align-items: center; /* Center items vertically */
+            justify-items: center; /* Center items horizontally */
+        }
+        .box > *{
+            margin-bottom:1em ;
+        }
+        .logo_con{
+            width: 100%;
+            height: 60%;
+            grid-column:1/3 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo{
+            height: 100%;
+            aspect-ratio: 1/1;
+            background-color: #877B31;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            scale: 2.5;
+        }
+        .box_img{
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-image: url('3gc.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .box_text{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .box_text > h1{
+            font-family: montserrat-bold;
+            font-size: 2em;
+            color: #615924;
+        }
+        .btn{
+            width: 50%;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: #877B31;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+
+        form{
+            width: 50%;
+            height: 55%;
+            min-width: 310px;
+            min-height: fit-content;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 2em;
+        }
+        input{
+            width: 100%;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: #877b3177;
+            border: none;
+            border-radius: 5px;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+        .thanks{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .return{
+            width: 50%;
+            max-width: 300px;
+            height: 50px;
+            padding: 1em 1em;
+            min-width: fit-content;
+            min-height: fit-content;
+            background: #877B31;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: poppins-semibold;
+            font-size: 1em;
+        }
+
+        
+        @media screen and (max-width: 768px){
+            body{
+                padding-top: 30px;
+            }
+            .box{
+                display: flex;
+                flex-direction: column;
+            }
+            .box_img{
+                width: 200px;
+            }   
+            .logo_con{
+                height: 50px;
+            }
+            .box_text{
+                padding: 1em;
+                justify-content: center;
+                height: fit-content;
+            }
+            .box_text >  *{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .btn{
+                width: 100%;
+            }
+            form{
+                width: 100%;
+                padding: 1em;
+            }
+            .return{
+                width: 100%;
+            }
+            
+        }
+
+        @media screen and (max-width: 550px){
+            body{
+                
+                overflow-y: scroll;
+            }
+            .box{
+                padding: .5em;
+            }
+            .box_img{
+                display: none;
+            }
+            .box_text > h1{
+                font-size: 2.5em;
+            }
+            .box_text > p{
+                font-size: 1.3em;
+            }
+            .btn{
+                font-size: 1.3em;
+            }
+            .return{
+                font-size: 1.3em;
+            }
+            
+        }
+    </style>
+</head>
+<body>      
+    <section>
+        <div class="box">
+            <div class="logo_con">
+                <div class="logo">LOGO</div>
+            </div>
+            <div class="box_img"></div>
+            <div class="box_text">
+                <h1>Master the Art of Managing Your Money with Ease</h1>
+                <p>Packed with expert tips and practical tools, this guide will help you build confidence in managing your money and planning for the future. Say goodbye to financial stress and hello to financial freedom!</p>
+                <button class="btn" onclick="cta()"> Get The Guide Now </button>
+            </div>
+        </div>
+    </section>
+    <div class="cover none"></div>
+    <form class="form none" onsubmit="filled = true; thnk()">
+        <h2>Who are we sending the Guide to?</h2>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <button class="btn" type="submit">Get The Guide Now</button>
+    </form>
+    <div class="thanks ">
+        <h1>Thank you for Your Response</h1> 
+        <button class="return"  onclick="back()">Return</button>
+    </div>
+
+    <script>
+       let pn = "filled3"
+    </script>
+    <script src="def.js"></script>
+</body>
+</html>
